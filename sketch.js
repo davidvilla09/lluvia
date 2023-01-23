@@ -8,8 +8,6 @@ createCanvas(800,800);
 for(let i =0 ; i <800; i++){
   stars[i] =new Star();
 }
-//background(51);
-
 
 }
 
