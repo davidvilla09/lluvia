@@ -38,17 +38,17 @@ function Star(){
     };
 
     this.show = function(){
-        fill(255,255,255);
+        fill(0,0,255);
         noStroke();
 
-        var sx = map(this.x / this.z, 0,1,0, width);
-        var sy = map(this.y / this.z, 0,1,0, height);
+        var sx = map(this.x / this.z, 0,1,2, width);
+        var sy = map(this.y / this.z, 0,1,2, height);
 
         var r = map(this.z, 0, width, 10,0);
         circle(sx, sy, r/2, r/2);
 
-        var px = map((this.x / this.pz)*1, 0,1,0, width);
-        var py = map((this.y / this.pz)*1, 0,1,0, height);
+        var px = map((this.x / this.pz)*1, 0,1,2, width);
+        var py = map((this.y / this.pz)*1, 0,1,2, height);
 
         this.pz =this.z;
 
@@ -58,7 +58,7 @@ function Star(){
 
         stroke(120,0,255,50);
         strokeWeight(r/2); 
-        //stroke(255,0,255, 120);
+
         line(px*.8,py*.8,sx *2,sy *2);
 
         strokeWeight(r/2.4); 
